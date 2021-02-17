@@ -86,6 +86,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Song Lyrics from Songs I am currently listening to',
+    date: 'February 16, 2021',
+    firstParagraph: 'For no one can fill those of your needs That you wont let show, you just call on me brother when you need a hand, we all need somebody to lean on',
+    
+    secondParagraph: 'Lean on me when youre not strong and ill be your friend, ill help you carry on for it wont be long till im gonna need somebody to lean on',
+
+    thirdParagraph: 'we all need somebody to lean on, if there is a load, you have to bear, that you cant carry im right up the road ill share your load if you just call me'
   }
 ];
 
@@ -114,3 +123,54 @@ const data = [
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
+
+
+function articleMaker(object){
+  //create the elements
+  let aDiv =document.createElement('div');
+  let aTitle = document.createElement('h2');
+  let aDate = document.createElement('p');
+  let par1 = document.createElement('p');
+  let par2 = document.createElement('p');
+  let par3 = document.createElement('p');
+  let button = document.createElement('span');
+
+  //elements inside div
+  aDiv.appendChild(aTitle);
+  aDiv.appendChild(aDate);
+  aDiv.appendChild(par1);
+  aDiv.appendChild(par2);
+  aDiv.appendChild(par3);
+  aDiv.appendChild(button);
+
+  //create class
+  aDiv.classList.add('article');
+  aDate.classList.add('date');
+  button.classList.add('expandButton');
+
+  //textcontent
+  aTitle.textContent = object.title;
+  aDate.textContent = object.date;
+  par1.textContent = object.firstParagraph;
+  par2.textContent = object.secondParagraph;
+  par3.textContent = object.thirdParagraph;
+  button.textContent = 'click me';
+
+  //eventListeners
+  button.addEventListener('click', event => {
+    aDiv.classList.toggle('article-open');
+  })
+
+  //return
+  return aDiv;
+
+}
+
+//map over entire data array, append each under articles
+let articles = document.querySelector('.articles');
+
+data.map(item => {
+  articles.appendChild(articleMaker(item))
+});
+
+console.log('hi')
