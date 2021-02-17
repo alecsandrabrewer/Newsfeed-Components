@@ -86,6 +86,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Song Lyrics from Songs I am currently listening to',
+    date: 'February 16, 2021',
+    firstParagraph: 'For no one can fill those of your needs That you wont let show, you just call on me brother when you need a hand, we all need somebody to lean on',
+    
+    secondParagraph: 'Lean on me when youre not strong and ill be your friend, ill help you carry on for it wont be long till im gonna need somebody to lean on',
+
+    thirdParagraph: 'we all need somebody to lean on, if there is a load, you have to bear, that you cant carry im right up the road ill share your load if you just call me'
   }
 ];
 
