@@ -116,7 +116,7 @@ const data = [
 */
 
 
-function articleMaker(array){
+function articleMaker(object){
   //create the elements
   let aDiv =document.createElement('div');
   let aTitle = document.createElement('h2');
@@ -163,3 +163,5 @@ let articles = document.querySelector('.articles');
 data.map(item => {
   articles.appendChild(articleMaker(item))
 });
+
+console.log('hi')
